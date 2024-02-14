@@ -3,7 +3,9 @@
 
 angular.module('LunchCheck', [])
 
-.controller('LunchCheckController', function ($scope) {
+.controller('LunchCheckController', ['$scope', LunchCheckController]);
+
+function LunchCheckController($scope) {
   $scope.lunches = "";
   $scope.message = "";
   
@@ -30,6 +32,5 @@ angular.module('LunchCheck', [])
 	  $scope.message = "Please enter data first";
 	};
   };
-});
+};
 }) ();
-
